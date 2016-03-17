@@ -9,7 +9,7 @@
 #import "ODRootVC.h"
 #import <objc/runtime.h>
 #import <objc/objc.h>
-
+#import "ODCountDBManager.h"
 
 @interface ODRootVC ()
 //成员数组
@@ -31,6 +31,12 @@
     [self.view addSubview:button];
     //初始化
     NSMutableArray*nameArr = [NSMutableArray arrayWithObjects:@"金晟意", @"李鸿勋", @"杨洁", @"刘天伟",@"张昊",@"刘照宇", nil];
+    [nameArr enumerateObjectsUsingBlock:^(NSString *  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+        ODCountModel *model = [[ODCountModel alloc]init];
+        model.name = nameArr[idx];
+        model.dutyCount = 1;
+        [[ODCountDBManager sharedManager] insertCountInfo:model];
+    }];
     _memberArr = nameArr;
     _weightArr = [NSMutableArray arrayWithObjects:@1, @1, @1, @1, @1, @1, nil];
     
