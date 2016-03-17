@@ -8,6 +8,7 @@
 
 #import "AppDelegate.h"
 #import "ODRootVC.h"
+#import "VBNavigationController.h"
 @interface AppDelegate ()
 
 @end
@@ -26,7 +27,8 @@
     
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     ODRootVC * rootCtrl = [[ODRootVC alloc]init];
-    self.window.rootViewController = rootCtrl;
+    VBNavigationController *navgationVC = [[VBNavigationController alloc]initWithRootViewController:rootCtrl];
+    self.window.rootViewController = navgationVC;
     [self.window makeKeyAndVisible];
     return YES;
 }

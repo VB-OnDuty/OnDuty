@@ -35,6 +35,22 @@
 		A241EB971C7EA6C6004385DA /* VBColorManager.m in Sources */ = {isa = PBXBuildFile; fileRef = A241EB961C7EA6C6004385DA /* VBColorManager.m */; };
 		A241EB9C1C7EA7DB004385DA /* UIView+ITTAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = A241EB9B1C7EA7DB004385DA /* UIView+ITTAdditions.m */; };
 		A241EB9F1C7EA855004385DA /* ODRootVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A241EB9E1C7EA855004385DA /* ODRootVC.m */; };
+		A241EBB21C87E8CD004385DA /* VBConfigDBManager.m in Sources */ = {isa = PBXBuildFile; fileRef = A241EBA41C87E8CD004385DA /* VBConfigDBManager.m */; };
+		A241EBB31C87E8CD004385DA /* VBDBManager.m in Sources */ = {isa = PBXBuildFile; fileRef = A241EBA61C87E8CD004385DA /* VBDBManager.m */; };
+		A241EBB41C87E8CD004385DA /* VBFMEncryptDatabase.m in Sources */ = {isa = PBXBuildFile; fileRef = A241EBAB1C87E8CD004385DA /* VBFMEncryptDatabase.m */; };
+		A241EBB51C87E8CD004385DA /* VBFMEncryptDatabaseQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = A241EBAD1C87E8CD004385DA /* VBFMEncryptDatabaseQueue.m */; };
+		A241EBB61C87E8CD004385DA /* VBFMEncryptHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = A241EBAF1C87E8CD004385DA /* VBFMEncryptHelper.m */; };
+		A241EBB71C87E8CD004385DA /* VBDBManagerFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = A241EBB11C87E8CD004385DA /* VBDBManagerFactory.m */; };
+		A241EBC41C883A6F004385DA /* FMDatabase.m in Sources */ = {isa = PBXBuildFile; fileRef = A241EBBA1C883A6F004385DA /* FMDatabase.m */; };
+		A241EBC51C883A6F004385DA /* FMDatabaseAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = A241EBBC1C883A6F004385DA /* FMDatabaseAdditions.m */; };
+		A241EBC61C883A6F004385DA /* FMDatabasePool.m in Sources */ = {isa = PBXBuildFile; fileRef = A241EBBE1C883A6F004385DA /* FMDatabasePool.m */; };
+		A241EBC71C883A6F004385DA /* FMDatabaseQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = A241EBC01C883A6F004385DA /* FMDatabaseQueue.m */; };
+		A241EBC81C883A6F004385DA /* FMResultSet.m in Sources */ = {isa = PBXBuildFile; fileRef = A241EBC31C883A6F004385DA /* FMResultSet.m */; };
+		A241EBCC1C883AD8004385DA /* VBFileManager.m in Sources */ = {isa = PBXBuildFile; fileRef = A241EBCB1C883AD8004385DA /* VBFileManager.m */; };
+		A241EBCE1C883B3C004385DA /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = A241EBCD1C883B3C004385DA /* libsqlite3.tbd */; };
+		A2CAA50E1C994E0400031094 /* ODRandomManager.m in Sources */ = {isa = PBXBuildFile; fileRef = A2CAA50D1C994E0400031094 /* ODRandomManager.m */; };
+		A2CAA5161C99507900031094 /* ODCountModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A2CAA5151C99507900031094 /* ODCountModel.m */; };
+		A2CAA5191C9952A200031094 /* ODCountDBManager.m in Sources */ = {isa = PBXBuildFile; fileRef = A2CAA5181C9952A200031094 /* ODCountDBManager.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -124,6 +140,42 @@
 		A241EB9B1C7EA7DB004385DA /* UIView+ITTAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+ITTAdditions.m"; sourceTree = "<group>"; };
 		A241EB9D1C7EA855004385DA /* ODRootVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ODRootVC.h; sourceTree = "<group>"; };
 		A241EB9E1C7EA855004385DA /* ODRootVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ODRootVC.m; sourceTree = "<group>"; };
+		A241EBA01C87E7FA004385DA /* OnDuty-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "OnDuty-Prefix.pch"; sourceTree = "<group>"; };
+		A241EBA31C87E8CD004385DA /* VBConfigDBManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VBConfigDBManager.h; sourceTree = "<group>"; };
+		A241EBA41C87E8CD004385DA /* VBConfigDBManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VBConfigDBManager.m; sourceTree = "<group>"; };
+		A241EBA51C87E8CD004385DA /* VBDBManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VBDBManager.h; sourceTree = "<group>"; };
+		A241EBA61C87E8CD004385DA /* VBDBManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VBDBManager.m; sourceTree = "<group>"; };
+		A241EBA81C87E8CD004385DA /* VBFMDBEncrypt.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VBFMDBEncrypt.h; sourceTree = "<group>"; };
+		A241EBA91C87E8CD004385DA /* VBFMDBEncryptConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VBFMDBEncryptConfig.h; sourceTree = "<group>"; };
+		A241EBAA1C87E8CD004385DA /* VBFMEncryptDatabase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VBFMEncryptDatabase.h; sourceTree = "<group>"; };
+		A241EBAB1C87E8CD004385DA /* VBFMEncryptDatabase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VBFMEncryptDatabase.m; sourceTree = "<group>"; };
+		A241EBAC1C87E8CD004385DA /* VBFMEncryptDatabaseQueue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VBFMEncryptDatabaseQueue.h; sourceTree = "<group>"; };
+		A241EBAD1C87E8CD004385DA /* VBFMEncryptDatabaseQueue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VBFMEncryptDatabaseQueue.m; sourceTree = "<group>"; };
+		A241EBAE1C87E8CD004385DA /* VBFMEncryptHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VBFMEncryptHelper.h; sourceTree = "<group>"; };
+		A241EBAF1C87E8CD004385DA /* VBFMEncryptHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VBFMEncryptHelper.m; sourceTree = "<group>"; };
+		A241EBB01C87E8CD004385DA /* VBDBManagerFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VBDBManagerFactory.h; sourceTree = "<group>"; };
+		A241EBB11C87E8CD004385DA /* VBDBManagerFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VBDBManagerFactory.m; sourceTree = "<group>"; };
+		A241EBB91C883A6F004385DA /* FMDatabase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabase.h; sourceTree = "<group>"; };
+		A241EBBA1C883A6F004385DA /* FMDatabase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabase.m; sourceTree = "<group>"; };
+		A241EBBB1C883A6F004385DA /* FMDatabaseAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabaseAdditions.h; sourceTree = "<group>"; };
+		A241EBBC1C883A6F004385DA /* FMDatabaseAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabaseAdditions.m; sourceTree = "<group>"; };
+		A241EBBD1C883A6F004385DA /* FMDatabasePool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabasePool.h; sourceTree = "<group>"; };
+		A241EBBE1C883A6F004385DA /* FMDatabasePool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabasePool.m; sourceTree = "<group>"; };
+		A241EBBF1C883A6F004385DA /* FMDatabaseQueue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabaseQueue.h; sourceTree = "<group>"; };
+		A241EBC01C883A6F004385DA /* FMDatabaseQueue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabaseQueue.m; sourceTree = "<group>"; };
+		A241EBC11C883A6F004385DA /* FMDB.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDB.h; sourceTree = "<group>"; };
+		A241EBC21C883A6F004385DA /* FMResultSet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMResultSet.h; sourceTree = "<group>"; };
+		A241EBC31C883A6F004385DA /* FMResultSet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMResultSet.m; sourceTree = "<group>"; };
+		A241EBCA1C883AD8004385DA /* VBFileManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VBFileManager.h; sourceTree = "<group>"; };
+		A241EBCB1C883AD8004385DA /* VBFileManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VBFileManager.m; sourceTree = "<group>"; };
+		A241EBCD1C883B3C004385DA /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
+		A2CAA50C1C994E0400031094 /* ODRandomManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ODRandomManager.h; sourceTree = "<group>"; };
+		A2CAA50D1C994E0400031094 /* ODRandomManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ODRandomManager.m; sourceTree = "<group>"; };
+		A2CAA5131C99501700031094 /* ODModelHeaders.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ODModelHeaders.h; sourceTree = "<group>"; };
+		A2CAA5141C99507900031094 /* ODCountModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ODCountModel.h; sourceTree = "<group>"; };
+		A2CAA5151C99507900031094 /* ODCountModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ODCountModel.m; sourceTree = "<group>"; };
+		A2CAA5171C9952A200031094 /* ODCountDBManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ODCountDBManager.h; sourceTree = "<group>"; };
+		A2CAA5181C9952A200031094 /* ODCountDBManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ODCountDBManager.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -131,6 +183,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A241EBCE1C883B3C004385DA /* libsqlite3.tbd in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -154,6 +207,7 @@
 		A241EAFD1C7EA16E004385DA = {
 			isa = PBXGroup;
 			children = (
+				A241EBCD1C883B3C004385DA /* libsqlite3.tbd */,
 				A241EB081C7EA16E004385DA /* OnDuty */,
 				A241EB221C7EA16E004385DA /* OnDutyTests */,
 				A241EB2D1C7EA16E004385DA /* OnDutyUITests */,
@@ -176,6 +230,8 @@
 			children = (
 				A241EB0C1C7EA16E004385DA /* AppDelegate.h */,
 				A241EB0D1C7EA16E004385DA /* AppDelegate.m */,
+				A241EBA01C87E7FA004385DA /* OnDuty-Prefix.pch */,
+				A2CAA5121C994FDF00031094 /* Models */,
 				A241EB651C7EA382004385DA /* 3rd */,
 				A241EB3F1C7EA342004385DA /* VBFrameworks */,
 				A241EB3D1C7EA2D6004385DA /* UI */,
@@ -220,6 +276,9 @@
 			isa = PBXGroup;
 			children = (
 				A241EB981C7EA746004385DA /* VBManagerHeaders.h */,
+				A241EBCF1C89F1B8004385DA /* RandomManager */,
+				A241EBC91C883AD8004385DA /* FileManager */,
+				A241EBA11C87E8CD004385DA /* DBManager */,
 				A241EB941C7EA6C6004385DA /* ColorManager */,
 			);
 			path = Managers;
@@ -307,6 +366,7 @@
 		A241EB651C7EA382004385DA /* 3rd */ = {
 			isa = PBXGroup;
 			children = (
+				A241EBB81C883A6F004385DA /* fmdb */,
 				A241EB991C7EA7DB004385DA /* Categories */,
 				A241EB661C7EA382004385DA /* CocoaLumberjack */,
 			);
@@ -392,6 +452,91 @@
 				A241EB9B1C7EA7DB004385DA /* UIView+ITTAdditions.m */,
 			);
 			path = Categories;
+			sourceTree = "<group>";
+		};
+		A241EBA11C87E8CD004385DA /* DBManager */ = {
+			isa = PBXGroup;
+			children = (
+				A241EBA21C87E8CD004385DA /* VBDBManager */,
+				A241EBB01C87E8CD004385DA /* VBDBManagerFactory.h */,
+				A241EBB11C87E8CD004385DA /* VBDBManagerFactory.m */,
+				A2CAA5171C9952A200031094 /* ODCountDBManager.h */,
+				A2CAA5181C9952A200031094 /* ODCountDBManager.m */,
+			);
+			path = DBManager;
+			sourceTree = "<group>";
+		};
+		A241EBA21C87E8CD004385DA /* VBDBManager */ = {
+			isa = PBXGroup;
+			children = (
+				A241EBA31C87E8CD004385DA /* VBConfigDBManager.h */,
+				A241EBA41C87E8CD004385DA /* VBConfigDBManager.m */,
+				A241EBA51C87E8CD004385DA /* VBDBManager.h */,
+				A241EBA61C87E8CD004385DA /* VBDBManager.m */,
+				A241EBA71C87E8CD004385DA /* VBFMDBEncrypt */,
+			);
+			path = VBDBManager;
+			sourceTree = "<group>";
+		};
+		A241EBA71C87E8CD004385DA /* VBFMDBEncrypt */ = {
+			isa = PBXGroup;
+			children = (
+				A241EBA81C87E8CD004385DA /* VBFMDBEncrypt.h */,
+				A241EBA91C87E8CD004385DA /* VBFMDBEncryptConfig.h */,
+				A241EBAA1C87E8CD004385DA /* VBFMEncryptDatabase.h */,
+				A241EBAB1C87E8CD004385DA /* VBFMEncryptDatabase.m */,
+				A241EBAC1C87E8CD004385DA /* VBFMEncryptDatabaseQueue.h */,
+				A241EBAD1C87E8CD004385DA /* VBFMEncryptDatabaseQueue.m */,
+				A241EBAE1C87E8CD004385DA /* VBFMEncryptHelper.h */,
+				A241EBAF1C87E8CD004385DA /* VBFMEncryptHelper.m */,
+			);
+			path = VBFMDBEncrypt;
+			sourceTree = "<group>";
+		};
+		A241EBB81C883A6F004385DA /* fmdb */ = {
+			isa = PBXGroup;
+			children = (
+				A241EBB91C883A6F004385DA /* FMDatabase.h */,
+				A241EBBA1C883A6F004385DA /* FMDatabase.m */,
+				A241EBBB1C883A6F004385DA /* FMDatabaseAdditions.h */,
+				A241EBBC1C883A6F004385DA /* FMDatabaseAdditions.m */,
+				A241EBBD1C883A6F004385DA /* FMDatabasePool.h */,
+				A241EBBE1C883A6F004385DA /* FMDatabasePool.m */,
+				A241EBBF1C883A6F004385DA /* FMDatabaseQueue.h */,
+				A241EBC01C883A6F004385DA /* FMDatabaseQueue.m */,
+				A241EBC11C883A6F004385DA /* FMDB.h */,
+				A241EBC21C883A6F004385DA /* FMResultSet.h */,
+				A241EBC31C883A6F004385DA /* FMResultSet.m */,
+			);
+			path = fmdb;
+			sourceTree = "<group>";
+		};
+		A241EBC91C883AD8004385DA /* FileManager */ = {
+			isa = PBXGroup;
+			children = (
+				A241EBCA1C883AD8004385DA /* VBFileManager.h */,
+				A241EBCB1C883AD8004385DA /* VBFileManager.m */,
+			);
+			path = FileManager;
+			sourceTree = "<group>";
+		};
+		A241EBCF1C89F1B8004385DA /* RandomManager */ = {
+			isa = PBXGroup;
+			children = (
+				A2CAA50C1C994E0400031094 /* ODRandomManager.h */,
+				A2CAA50D1C994E0400031094 /* ODRandomManager.m */,
+			);
+			path = RandomManager;
+			sourceTree = "<group>";
+		};
+		A2CAA5121C994FDF00031094 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				A2CAA5131C99501700031094 /* ODModelHeaders.h */,
+				A2CAA5141C99507900031094 /* ODCountModel.h */,
+				A2CAA5151C99507900031094 /* ODCountModel.m */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -523,11 +668,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A241EBB71C87E8CD004385DA /* VBDBManagerFactory.m in Sources */,
 				A241EB891C7EA382004385DA /* DDASLLogger.m in Sources */,
 				A241EB5F1C7EA342004385DA /* VBNavigationController.m in Sources */,
+				A241EBB61C87E8CD004385DA /* VBFMEncryptHelper.m in Sources */,
+				A2CAA5191C9952A200031094 /* ODCountDBManager.m in Sources */,
+				A241EBB21C87E8CD004385DA /* VBConfigDBManager.m in Sources */,
 				A241EB8E1C7EA382004385DA /* DDDispatchQueueLogFormatter.m in Sources */,
 				A241EB5C1C7EA342004385DA /* VBLog.m in Sources */,
+				A241EBB31C87E8CD004385DA /* VBDBManager.m in Sources */,
 				A241EB631C7EA342004385DA /* VBView.m in Sources */,
+				A241EBC81C883A6F004385DA /* FMResultSet.m in Sources */,
 				A241EB5D1C7EA342004385DA /* VBObject.m in Sources */,
 				A241EB8D1C7EA382004385DA /* DDContextFilterLogFormatter.m in Sources */,
 				A241EB971C7EA6C6004385DA /* VBColorManager.m in Sources */,
@@ -535,18 +686,27 @@
 				A241EB9F1C7EA855004385DA /* ODRootVC.m in Sources */,
 				A241EB8B1C7EA382004385DA /* DDLog.m in Sources */,
 				A241EB641C7EA342004385DA /* VBViewController.m in Sources */,
+				A241EBC61C883A6F004385DA /* FMDatabasePool.m in Sources */,
 				A241EB5B1C7EA342004385DA /* UIView+VBMotionEffect.m in Sources */,
 				A241EB5E1C7EA342004385DA /* VBNavigationBar.m in Sources */,
+				A241EBB41C87E8CD004385DA /* VBFMEncryptDatabase.m in Sources */,
 				A241EB881C7EA382004385DA /* DDASLLogCapture.m in Sources */,
+				A241EBC41C883A6F004385DA /* FMDatabase.m in Sources */,
 				A241EB8A1C7EA382004385DA /* DDFileLogger.m in Sources */,
+				A2CAA5161C99507900031094 /* ODCountModel.m in Sources */,
+				A241EBB51C87E8CD004385DA /* VBFMEncryptDatabaseQueue.m in Sources */,
+				A241EBC51C883A6F004385DA /* FMDatabaseAdditions.m in Sources */,
 				A241EB621C7EA342004385DA /* VBTableViewCell.m in Sources */,
 				A241EB611C7EA342004385DA /* VBTableView.m in Sources */,
 				A241EB8C1C7EA382004385DA /* DDTTYLogger.m in Sources */,
+				A241EBCC1C883AD8004385DA /* VBFileManager.m in Sources */,
 				A241EB8F1C7EA382004385DA /* DDMultiFormatter.m in Sources */,
 				A241EB9C1C7EA7DB004385DA /* UIView+ITTAdditions.m in Sources */,
 				A241EB0E1C7EA16E004385DA /* AppDelegate.m in Sources */,
+				A241EBC71C883A6F004385DA /* FMDatabaseQueue.m in Sources */,
 				A241EB0B1C7EA16E004385DA /* main.m in Sources */,
 				A241EB601C7EA342004385DA /* VBTabBarController.m in Sources */,
+				A2CAA50E1C994E0400031094 /* ODRandomManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

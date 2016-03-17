@@ -10,12 +10,12 @@
 #define VBManagerHeaders_h
 
 //#import "VBLocationManager.h"
-//#import "VBDBManager.h"
-//#import "VBDBManagerFactory.h"
-//#import "VBFileManager.h"
+#import "VBDBManager.h"
+#import "VBDBManagerFactory.h"
+#import "VBFileManager.h"
 //#import "VBHTTPHelper.h"
 //#import "VBHttpUrlManager.h"
 //#import "VBHTTPModels.h"
 #import "VBColorManager.h"
-
+#import "ODRandomManager.h"
 #endif /* VBManagerHeaders_h */
