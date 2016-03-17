@@ -53,7 +53,7 @@
         NSString *sql = @"INSERT INTO CountInfoList (name, dutyCount) VALUES(?, ?)";
         retValue = [db executeUpdate:sql,
                     [info name],
-                    [info dutyCount]
+                    [NSNumber numberWithInteger:info.dutyCount]
                     ];
         
     }];
@@ -88,6 +88,8 @@
     [self deleteCountInfo:info];
 }
 
+- (void)updateDutyCount:(NSInteger)count WithName:(NSString *)name{
+}
 
 //查找
 - (ODCountModel *)selectCountInfoWithName:(NSString *)name{

@@ -8,15 +8,33 @@
 
 #import "VBObject.h"
 
+typedef void (^randomSucess)(id result);
+
+
 @interface ODRandomManager : VBObject
 
 /**
  *  随机打乱数组
  */
 + (NSArray *)randomObjectForArray:(NSArray *)array;
+
+
 /**
  *  根据权重随机获取数组中的一个元素
- *    权重数组范例: @[@1,@2.....];
+ *
+ *  @param array       随机元素数组
+ *  @param weightArray 权重数组 范例: @[@1,@2.....]
+ *
+ *  @return 一个随机元素
  */
 + (id)getRandomObjectForArray:(NSArray *)array withWeightArray:(NSArray *)weightArray;
+
+
+/**
+ *  根据权重随机获取数组中的一个元素block方法
+ *
+ *  @param array       随机元素数组
+ *  @param weightArray 权重数组 范例: @[@1,@2.....]
+ */
++ (void)getRandomObjectForArray:(NSArray *)array withWeightArray:(NSArray *)weightArray success:(randomSucess)success;
 @end

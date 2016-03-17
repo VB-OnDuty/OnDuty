@@ -37,6 +37,7 @@
 		A2CAA50E1C994E0400031094 /* ODRandomManager.m in Sources */ = {isa = PBXBuildFile; fileRef = A2CAA50D1C994E0400031094 /* ODRandomManager.m */; };
 		A2CAA5161C99507900031094 /* ODCountModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A2CAA5151C99507900031094 /* ODCountModel.m */; };
 		A2CAA5191C9952A200031094 /* ODCountDBManager.m in Sources */ = {isa = PBXBuildFile; fileRef = A2CAA5181C9952A200031094 /* ODCountDBManager.m */; };
+		A2CAA5261C9A500B00031094 /* ODtextDB.m in Sources */ = {isa = PBXBuildFile; fileRef = A2CAA5251C9A500B00031094 /* ODtextDB.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -130,6 +131,8 @@
 		A2CAA5151C99507900031094 /* ODCountModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ODCountModel.m; sourceTree = "<group>"; };
 		A2CAA5171C9952A200031094 /* ODCountDBManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ODCountDBManager.h; sourceTree = "<group>"; };
 		A2CAA5181C9952A200031094 /* ODCountDBManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ODCountDBManager.m; sourceTree = "<group>"; };
+		A2CAA5241C9A500B00031094 /* ODtextDB.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ODtextDB.h; sourceTree = "<group>"; };
+		A2CAA5251C9A500B00031094 /* ODtextDB.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ODtextDB.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -359,6 +362,8 @@
 				A241EBA21C87E8CD004385DA /* VBDBManager */,
 				A241EBB01C87E8CD004385DA /* VBDBManagerFactory.h */,
 				A241EBB11C87E8CD004385DA /* VBDBManagerFactory.m */,
+				A2CAA5241C9A500B00031094 /* ODtextDB.h */,
+				A2CAA5251C9A500B00031094 /* ODtextDB.m */,
 				A2CAA5171C9952A200031094 /* ODCountDBManager.h */,
 				A2CAA5181C9952A200031094 /* ODCountDBManager.m */,
 			);
@@ -612,6 +617,7 @@
 				A241EBB71C87E8CD004385DA /* VBDBManagerFactory.m in Sources */,
 				A241EB5F1C7EA342004385DA /* VBNavigationController.m in Sources */,
 				A241EBB61C87E8CD004385DA /* VBFMEncryptHelper.m in Sources */,
+				A2CAA5261C9A500B00031094 /* ODtextDB.m in Sources */,
 				A2CAA5191C9952A200031094 /* ODCountDBManager.m in Sources */,
 				A241EBB21C87E8CD004385DA /* VBConfigDBManager.m in Sources */,
 				A241EB5C1C7EA342004385DA /* VBLog.m in Sources */,

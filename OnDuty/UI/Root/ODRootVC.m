@@ -13,9 +13,9 @@
 
 @interface ODRootVC ()
 //成员数组
-@property (nonatomic, strong)NSMutableArray *memberArr;
+@property (nonatomic, strong)NSArray *memberArr;
 //权重数组
-@property (nonatomic, strong)NSMutableArray *weightArr;
+@property (nonatomic, strong)NSArray *weightArr;
 @end
 
 @implementation ODRootVC
@@ -32,18 +32,17 @@
     //初始化
     NSMutableArray*nameArr = [NSMutableArray arrayWithObjects:@"金晟意", @"李鸿勋", @"杨洁", @"刘天伟",@"张昊",@"刘照宇", nil];
     [nameArr enumerateObjectsUsingBlock:^(NSString *  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
-        ODCountModel *model = [[ODCountModel alloc]init];
-        model.name = nameArr[idx];
-        model.dutyCount = 1;
-        [[ODCountDBManager sharedManager] insertCountInfo:model];
+        [[ODCountDBManager sharedManager] insertCountInfoWithName:obj];
     }];
-    _memberArr = nameArr;
-    _weightArr = [NSMutableArray arrayWithObjects:@1, @1, @1, @1, @1, @1, nil];
+    _memberArr = [[ODCountDBManager sharedManager]getAllMemberArray];
+    _weightArr = [[ODCountDBManager sharedManager] getDutyCountWith:_memberArr];
     
 }
 - (void)buttonClicked:(UIButton *)button{
-    NSString *fuckBoy = [ODRandomManager getRandomObjectForArray:_memberArr withWeightArray:_weightArr];
-        NSLog(@"%@", fuckBoy);
+  [ODRandomManager getRandomObjectForArray:_memberArr withWeightArray:_weightArr success:^(NSString *result) {
+      NSLog(@"%@",result);
+  }];
+
 }
 
 - (void)didReceiveMemoryWarning {

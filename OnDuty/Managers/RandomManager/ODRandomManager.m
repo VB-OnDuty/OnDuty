@@ -58,5 +58,7 @@
     return object;
 }
 
-
++ (void)getRandomObjectForArray:(NSArray *)array withWeightArray:(NSArray *)weightArray success:(randomSucess)success{
+    success([ODRandomManager getRandomObjectForArray:array withWeightArray:weightArray]);
+}
 @end
