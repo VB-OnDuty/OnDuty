@@ -12,6 +12,6 @@
 
 
 + (UIColor *)colorWithHomeColor {
-    return [UIColor redColor];
+    return [UIColor colorWithHexString:@"202B34"];
 }
 @end

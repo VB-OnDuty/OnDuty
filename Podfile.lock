@@ -9,6 +9,11 @@ PODS:
     - CocoaLumberjack/Default
   - FMDB/SQLCipher (2.6):
     - SQLCipher
+  - Masonry (0.6.4)
+  - MMPlaceHolder (1.9)
+  - MMTweenAnimation (1.1):
+    - pop
+  - pop (1.0.9)
   - SQLCipher (3.1.0):
     - SQLCipher/standard (= 3.1.0)
   - SQLCipher/common (3.1.0)
@@ -18,10 +23,18 @@ PODS:
 DEPENDENCIES:
   - CocoaLumberjack
   - FMDB/SQLCipher
+  - Masonry
+  - MMPlaceHolder
+  - MMTweenAnimation
+  - pop
 
 SPEC CHECKSUMS:
   CocoaLumberjack: 17fe8581f84914d5d7e6360f7c70022b173c3ae0
   FMDB: c1968bab3ab0aed38f66cb778ae1e7fa9a652b6e
+  Masonry: 281802d04d787ea2973179ee8bcb50500579ede2
+  MMPlaceHolder: 40212b9dfe8760134b1b2fce3232f0d46200178f
+  MMTweenAnimation: a095d3203731fcb32a9b8039c4776cef0dbd2a58
+  pop: f667631a5108a2e60d9e8797c9b32ddaf2080bce
   SQLCipher: 4684434d5791db86512cd7e02172aefba575849e
 
 COCOAPODS: 0.39.0

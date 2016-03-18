@@ -60,7 +60,7 @@
 #import "VBManagerHeaders.h"
 #import "ODModelHeaders.h"
 /*----------- Categories ------------*/
-//#import "UIColor+HEX.h"
+#import "UIColor+HEX.h"
 #import "UIView+ITTAdditions.h"
 
 #endif /* CommonDef_h */

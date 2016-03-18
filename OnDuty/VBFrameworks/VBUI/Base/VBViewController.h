@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "VBNavigationBar.h"
 #import "VBView.h"
+#import <Masonry/Masonry.h>
 
 @interface VBViewController : UIViewController
 @property (nonatomic, strong) VBNavigationBar *navBar;

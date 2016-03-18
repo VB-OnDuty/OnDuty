@@ -38,6 +38,10 @@
 		A2CAA5161C99507900031094 /* ODCountModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A2CAA5151C99507900031094 /* ODCountModel.m */; };
 		A2CAA5191C9952A200031094 /* ODCountDBManager.m in Sources */ = {isa = PBXBuildFile; fileRef = A2CAA5181C9952A200031094 /* ODCountDBManager.m */; };
 		A2CAA5261C9A500B00031094 /* ODtextDB.m in Sources */ = {isa = PBXBuildFile; fileRef = A2CAA5251C9A500B00031094 /* ODtextDB.m */; };
+		A2CAA5291C9C649700031094 /* MFLiHei_Noncommercial-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = A2CAA5281C9C640400031094 /* MFLiHei_Noncommercial-Regular.otf */; };
+		A2CAA52C1C9C945500031094 /* ODRootButton.m in Sources */ = {isa = PBXBuildFile; fileRef = A2CAA52B1C9C945500031094 /* ODRootButton.m */; };
+		A2CAA52F1C9C97EE00031094 /* UIColor+HEX.m in Sources */ = {isa = PBXBuildFile; fileRef = A2CAA52E1C9C97EE00031094 /* UIColor+HEX.m */; };
+		A2CAA5331C9C9F8C00031094 /* ODDutyVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A2CAA5321C9C9F8C00031094 /* ODDutyVC.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -133,6 +137,13 @@
 		A2CAA5181C9952A200031094 /* ODCountDBManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ODCountDBManager.m; sourceTree = "<group>"; };
 		A2CAA5241C9A500B00031094 /* ODtextDB.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ODtextDB.h; sourceTree = "<group>"; };
 		A2CAA5251C9A500B00031094 /* ODtextDB.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ODtextDB.m; sourceTree = "<group>"; };
+		A2CAA5281C9C640400031094 /* MFLiHei_Noncommercial-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "MFLiHei_Noncommercial-Regular.otf"; sourceTree = "<group>"; };
+		A2CAA52A1C9C945500031094 /* ODRootButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ODRootButton.h; sourceTree = "<group>"; };
+		A2CAA52B1C9C945500031094 /* ODRootButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ODRootButton.m; sourceTree = "<group>"; };
+		A2CAA52D1C9C97EE00031094 /* UIColor+HEX.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+HEX.h"; sourceTree = "<group>"; };
+		A2CAA52E1C9C97EE00031094 /* UIColor+HEX.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+HEX.m"; sourceTree = "<group>"; };
+		A2CAA5311C9C9F8C00031094 /* ODDutyVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ODDutyVC.h; sourceTree = "<group>"; };
+		A2CAA5321C9C9F8C00031094 /* ODDutyVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ODDutyVC.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -206,6 +217,7 @@
 				A241EB151C7EA16E004385DA /* Assets.xcassets */,
 				A241EB171C7EA16E004385DA /* LaunchScreen.storyboard */,
 				A241EB1A1C7EA16E004385DA /* Info.plist */,
+				A2CAA5281C9C640400031094 /* MFLiHei_Noncommercial-Regular.otf */,
 				A241EB091C7EA16E004385DA /* Supporting Files */,
 			);
 			path = OnDuty;
@@ -254,6 +266,7 @@
 		A241EB3D1C7EA2D6004385DA /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				A2CAA5301C9C9F5700031094 /* Duty */,
 				A241EB3E1C7EA2D6004385DA /* Root */,
 			);
 			path = UI;
@@ -264,6 +277,8 @@
 			children = (
 				A241EB9D1C7EA855004385DA /* ODRootVC.h */,
 				A241EB9E1C7EA855004385DA /* ODRootVC.m */,
+				A2CAA52A1C9C945500031094 /* ODRootButton.h */,
+				A2CAA52B1C9C945500031094 /* ODRootButton.m */,
 			);
 			path = Root;
 			sourceTree = "<group>";
@@ -352,6 +367,8 @@
 			children = (
 				A241EB9A1C7EA7DB004385DA /* UIView+ITTAdditions.h */,
 				A241EB9B1C7EA7DB004385DA /* UIView+ITTAdditions.m */,
+				A2CAA52D1C9C97EE00031094 /* UIColor+HEX.h */,
+				A2CAA52E1C9C97EE00031094 /* UIColor+HEX.m */,
 			);
 			path = Categories;
 			sourceTree = "<group>";
@@ -423,6 +440,15 @@
 				A2CAA5151C99507900031094 /* ODCountModel.m */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		A2CAA5301C9C9F5700031094 /* Duty */ = {
+			isa = PBXGroup;
+			children = (
+				A2CAA5311C9C9F8C00031094 /* ODDutyVC.h */,
+				A2CAA5321C9C9F8C00031094 /* ODDutyVC.m */,
+			);
+			path = Duty;
 			sourceTree = "<group>";
 		};
 		D42EF20F013980D0759AB01C /* Pods */ = {
@@ -540,6 +566,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A2CAA5291C9C649700031094 /* MFLiHei_Noncommercial-Regular.otf in Resources */,
 				A241EB191C7EA16E004385DA /* LaunchScreen.storyboard in Resources */,
 				A241EB161C7EA16E004385DA /* Assets.xcassets in Resources */,
 			);
@@ -631,8 +658,11 @@
 				A241EB5E1C7EA342004385DA /* VBNavigationBar.m in Sources */,
 				A241EBB41C87E8CD004385DA /* VBFMEncryptDatabase.m in Sources */,
 				A2CAA5161C99507900031094 /* ODCountModel.m in Sources */,
+				A2CAA52F1C9C97EE00031094 /* UIColor+HEX.m in Sources */,
+				A2CAA52C1C9C945500031094 /* ODRootButton.m in Sources */,
 				A241EBB51C87E8CD004385DA /* VBFMEncryptDatabaseQueue.m in Sources */,
 				A241EB621C7EA342004385DA /* VBTableViewCell.m in Sources */,
+				A2CAA5331C9C9F8C00031094 /* ODDutyVC.m in Sources */,
 				A241EB611C7EA342004385DA /* VBTableView.m in Sources */,
 				A241EBCC1C883AD8004385DA /* VBFileManager.m in Sources */,
 				A241EB9C1C7EA7DB004385DA /* UIView+ITTAdditions.m in Sources */,
