@@ -25,9 +25,11 @@
 - (void)deleteCountInfoWithName:(NSString *)name;
 
 /*** 修改 */
-//更新dutyCount 根据名字
-- (void)updateDutyCount:(NSInteger)count WithName:(NSString *)name;
 
+//更新dutyCount 根据名字
+- (BOOL)updateDutyCount:(NSInteger)count WithName:(NSString *)name;
+//在现有dutyCount基础上加1
+- (BOOL)updateDutyCountPlusOneWithName:(NSString *)name;
 /*** 查找 */
 - (ODCountModel *)selectCountInfoWithName:(NSString *)name;
 //获取列表所有数据

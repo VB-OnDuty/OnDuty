@@ -30,6 +30,7 @@
     VBNavigationController *navgationVC = [[VBNavigationController alloc]initWithRootViewController:rootCtrl];
     self.window.rootViewController = navgationVC;
     [self.window makeKeyAndVisible];
+    NSLog(@"%@", [VBFileManager getPathWithType:VBFilePATH_DUCUMENT]);
     return YES;
 }
 

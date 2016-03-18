@@ -87,10 +87,29 @@
     info.name = name;
     [self deleteCountInfo:info];
 }
-
-- (void)updateDutyCount:(NSInteger)count WithName:(NSString *)name{
+//更新dutyCount 根据名字
+- (BOOL)updateDutyCount:(NSInteger)count WithName:(NSString *)name{
+    if (count <= 0) {
+        VBLogError(@"dutyCount不可<=0");
+        return NO;
+    }
+    __block BOOL retValue = NO;
+    [[_dbMgr fmDabaseQueue] inDatabase:^(FMDatabase *db) {
+        NSString *sql = [NSString stringWithFormat:@"update CountInfoList set dutyCount = %zd where name = '%@'", count, name];
+      retValue = [db executeUpdate:sql];
+        
+    }];
+    return retValue;
 }
-
+//在现有dutyCount基础上加1
+- (BOOL)updateDutyCountPlusOneWithName:(NSString *)name{
+    __block BOOL retValue = NO;
+    [[_dbMgr fmDabaseQueue] inDatabase:^(FMDatabase *db) {
+        NSString *sql = [NSString stringWithFormat:@"update CountInfoList set dutyCount = dutyCount + 1 where name = '%@'", name];
+        retValue = [db executeUpdate:sql];
+    }];
+    return retValue;
+}
 //查找
 - (ODCountModel *)selectCountInfoWithName:(NSString *)name{
     __block ODCountModel *resultInfo = nil;
