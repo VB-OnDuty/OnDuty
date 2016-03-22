@@ -39,6 +39,9 @@
 // 所有的导航栏的高度, 这是把状态栏算在内的
 #define     NAVIGATION_BAR_HEIGHT   (44.0f + STATUS_BAR_HEIGHT)
 
+//
+#define     VIEW_WITHOUTNAV_HEIGHT (SCREEN_HEIGHT - NAVIGATION_BAR_HEIGHT)
+
 // tab bar的高度
 #define     BASE_TAB_BAR_HEIGHT     48
 
@@ -57,8 +60,8 @@
 
 
 //#import "VBModelHeaders.h"
-#import "VBManagerHeaders.h"
 #import "ODModelHeaders.h"
+#import "VBManagerHeaders.h"
 /*----------- Categories ------------*/
 #import "UIColor+HEX.h"
 #import "UIView+ITTAdditions.h"

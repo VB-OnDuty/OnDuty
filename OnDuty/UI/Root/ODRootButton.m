@@ -24,6 +24,7 @@
    self = [super init];
     if (self) {
         
+        
         _grayView = [[UIView alloc]init];
         [self addSubview:_grayView];
         _grayView.backgroundColor = [VBColorManager colorWithHomeColor];
@@ -68,6 +69,8 @@
 }
 
 - (void)touchesEnded:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
-    _block();
+    if (_block) {
+        _block();
+    }
 }
 @end

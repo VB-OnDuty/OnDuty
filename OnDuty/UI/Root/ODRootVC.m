@@ -20,12 +20,13 @@
 
 - (void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
-    [self.navigationController setNavigationBarHidden:YES animated:NO];
+    [self.navigationController setNavigationBarHidden:YES animated:YES];
 }
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-
+    self.automaticallyAdjustsScrollViewInsets = NO;
+    self.edgesForExtendedLayout = UIRectEdgeNone;
     //初始化
     NSMutableArray*nameArr = [NSMutableArray arrayWithObjects:@"金晟意", @"李鸿勋", @"杨洁", @"刘天伟",@"张昊",@"刘照宇", nil];
     
@@ -90,7 +91,7 @@
         button.title = @"今天谁值日";
         
         button.block = ^(){
-            NSLog(@"mai");
+            [self.navigationController pushViewController:[ODDutyVC new] animated:YES];
         };
         
         button;

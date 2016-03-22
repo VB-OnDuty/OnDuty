@@ -13,14 +13,20 @@
 }
 - (void)viewDidLoad{
     [super viewDidLoad];
-    [self.view setBackgroundColor:[UIColor whiteColor]];
     [self.view setClipsToBounds:YES];
     self.automaticallyAdjustsScrollViewInsets = NO;
+    self.view.backgroundColor = [VBColorManager colorWithHomeColor];
     
+    UIView *statusBarView = [[UIView alloc]initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, 20)];
+    statusBarView.backgroundColor = [VBColorManager colorWithHomeColor];
+    [self.view addSubview:statusBarView];
 }
+
+
 
 - (void)initNavBar{
     if (!_navBar) {
+        
         _navBar = [[VBNavigationBar alloc] init];
         _navItem = [[UINavigationItem alloc] init];
         
@@ -28,6 +34,8 @@
         [_navBar setTranslucent:NO];
         [_navBar pushNavigationItem:_navItem animated:NO];
         [_navBar setBarTintColor:[UIColor whiteColor]];
+        _navBar.shadowImage = [UIImage new];
+        [_navBar setBackgroundColor:[VBColorManager colorWithHomeColor]];
         [_navBar setTitleTextAttributes:[NSDictionary dictionaryWithObjectsAndKeys:[VBColorManager colorWithHomeColor],NSForegroundColorAttributeName,[UIFont fontWithName:@"Arial Rounded MT Bold" size:17],NSFontAttributeName, nil]];
         
         [self.view addSubview:_navBar];

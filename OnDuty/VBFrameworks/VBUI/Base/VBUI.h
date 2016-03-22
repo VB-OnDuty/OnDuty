@@ -16,5 +16,5 @@
 #import "VBTableView.h"
 #import "VBTableViewCell.h"
 #import "VBTabBarController.h"
-
+#import "VBLabel.h"
 #endif /* VBUI_h */

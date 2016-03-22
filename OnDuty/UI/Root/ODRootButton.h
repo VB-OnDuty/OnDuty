@@ -16,5 +16,5 @@ typedef void (^SelectBlock)();
 
 @property (nonatomic, strong) NSString *title;
 
-@property (nonatomic, assign) SelectBlock block;
+@property (nonatomic, copy) SelectBlock block;
 @end
