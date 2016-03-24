@@ -65,5 +65,4 @@
 /*----------- Categories ------------*/
 #import "UIColor+HEX.h"
 #import "UIView+ITTAdditions.h"
-
 #endif /* CommonDef_h */

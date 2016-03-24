@@ -19,7 +19,5 @@
 
 @property (nonatomic, strong) ODDutyLable *tipLB;
 
-
-- (void)makeCellFilter:(CGFloat)value;
-- (void)cellAlphaWithContentoffsetY:(CGFloat)y;
+- (void)isOnDutyToday:(BOOL)isToday;
 @end

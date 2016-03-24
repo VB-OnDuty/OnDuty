@@ -12,5 +12,5 @@
 
 + (UIColor *)colorWithHomeColor;            //主色
 
-//+ (UIColor *)colorWithHomeGrayColor;     //主页灰色
++ (UIColor *)colorWithHomeOrangeColor;     //主页橙色
 @end

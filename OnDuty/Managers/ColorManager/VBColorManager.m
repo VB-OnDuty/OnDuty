@@ -14,4 +14,8 @@
 + (UIColor *)colorWithHomeColor {
     return [UIColor colorWithHexString:@"202B34"];
 }
+
++ (UIColor *)colorWithHomeOrangeColor{
+    return [UIColor colorWithHexString:@"EF7441"];
+}
 @end

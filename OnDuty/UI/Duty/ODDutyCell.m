@@ -93,12 +93,11 @@
         make.size.equalTo(_midLineView);
     }];
 }
-- (void)makeCellFilter:(CGFloat)value{
-    self.contentView.alpha = value;
-}
-
-
-- (void)cellAlphaWithContentoffsetY:(CGFloat)y {
-    [self makeCellFilter:y];
+- (void)isOnDutyToday:(BOOL)isToday{
+    if (isToday) {
+        _tipLB.textColor = [VBColorManager colorWithHomeOrangeColor];
+        return;
+    }
+    _tipLB.textColor = [UIColor blackColor];
 }
 @end
