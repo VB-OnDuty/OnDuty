@@ -24,7 +24,7 @@
 #else
     [VBLog setLevel:VBLogLevelOff];
 #endif
-    
+    [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent animated:NO];
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     ODRootVC * rootCtrl = [[ODRootVC alloc]init];
     VBNavigationController *navgationVC = [[VBNavigationController alloc]initWithRootViewController:rootCtrl];

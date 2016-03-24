@@ -45,5 +45,7 @@
 	<array>
 		<string>MFLiHei_Noncommercial-Regular.otf</string>
 	</array>
+	<key>UIViewControllerBasedStatusBarAppearance</key>
+	<false/>
 </dict>
 </plist>
