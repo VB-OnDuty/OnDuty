@@ -23,6 +23,7 @@
         
         [self initSubViews];
         self.selectionStyle = UITableViewCellSelectionStyleNone;
+
     }
     return self;
 }
@@ -64,7 +65,7 @@
     [_midLineView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.top.mas_equalTo(_dateLB.mas_bottom).insets(UIEdgeInsetsMake(10, 0, 0, 0));
         make.left.mas_equalTo(@60);
-        make.size.mas_equalTo(CGSizeMake(SCREEN_WIDTH - 60, 0.5));
+        make.size.mas_equalTo(CGSizeMake(SCREEN_WIDTH - 60, .5));
     }];
     
     [_photoIV mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -92,5 +93,12 @@
         make.size.equalTo(_midLineView);
     }];
 }
+- (void)makeCellFilter:(CGFloat)value{
+    self.contentView.alpha = value;
+}
 
+
+- (void)cellAlphaWithContentoffsetY:(CGFloat)y {
+    [self makeCellFilter:y];
+}
 @end

@@ -11,9 +11,14 @@
 
 @interface ODDutyVC () <
     UITableViewDataSource,
-    UITableViewDelegate
+    UITableViewDelegate,
+    UIScrollViewDelegate
 >
+
 @property (nonatomic, strong)UITableView *tableView;
+
+
+
 @end
 
 @implementation ODDutyVC
@@ -31,6 +36,7 @@
     self.title = @"值日表";
     [self initNav];
     [self initTableView];
+    
     
 }
 
@@ -64,6 +70,19 @@
     _tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
     [self.view addSubview:_tableView];
     
+
+    UIImage *imageForMask = [UIImage imageNamed:@"Mask.png"];
+    
+    CALayer *maskLayer = [CALayer layer];
+    
+    maskLayer.frame = CGRectMake(0, NAVIGATION_BAR_HEIGHT, SCREEN_WIDTH, SCREEN_HEIGHT - NAVIGATION_BAR_HEIGHT);
+    
+    maskLayer.contents = (__bridge id _Nullable)([imageForMask CGImage]);
+    
+    [self.view.layer addSublayer: maskLayer];
+//    [[_tableView layer]setMask:maskLayer];
+
+    
 }
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
     return 30;
@@ -74,13 +93,71 @@
     if (!cell) {
         cell = [[ODDutyCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:identity];
     }
+//    NSArray *array = tableView.visibleCells;
+//    NSInteger index = 0;
+//    for (index = array.count; index > 0; index--) {
+//        ODDutyCell *cell1 = array[index - 1];
+//        [cell1 makeCellFilter:(index * .2)];
+//        cell1.tipLB.text = [NSString stringWithFormat:@"%zd", index - 1];
+//    }
+    
+    
     cell.dateLB.text = @"2016/03/22";
     cell.photoIV.image = [UIImage imageNamed:@"123.jpg"];
     cell.nameLB.text = @"张日天";
-    cell.tipLB.text = @"就在今天";
+    CGRect rectInTableView = [tableView rectForRowAtIndexPath:indexPath];
+    CGRect rectInSuperview = [tableView convertRect:rectInTableView toView:[tableView superview]];
+//    [cell makeCellFilter:rectInSuperview.origin.y/1000];
+//    VBLogInfo(@"%f",rectInSuperview.origin.y);
     return cell;
 }
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
-    return 150;
+    return 140;
+}
+
+- (void)scrollViewDidScroll:(UIScrollView *)scrollView{
+    if (_tableView != scrollView) {
+        return;
+    }
+    if (scrollView.contentOffset.y < 0) {
+        return;
+    }
+//    VBLogInfo(@"%f",scrollView.contentOffset.y);
+//    [self cellsForTableView:_tableView];
+    CGFloat y = scrollView.contentOffset.y;
+    if ((NSInteger)y % 2 != 0) {
+        return;
+    }
+    NSInteger row =  y / 140;
+    VBLogInfo(@"%zd",row);
+//    for (NSInteger i = 0; i < 6; i++) {
+//        NSIndexPath *indexPath = [NSIndexPath indexPathForRow:row + i inSection:0];
+//        ODDutyCell *cell = (ODDutyCell *)[_tableView cellForRowAtIndexPath:indexPath];
+//        [cell makeCellFilter:(1 - i * .2)];
+//    }
+    
+//    NSIndexPath *path =  [_tableView indexPathForRowAtPoint:CGPointMake(scrollView.contentOffset.x, scrollView.contentOffset.y)];
+//    ODDutyCell *cell = (ODDutyCell *)[_tableView cellForRowAtIndexPath:path];
+//    NSLog(@"path = %@", path);
+//    NSLog(@"cell = %@", cell);
+//    NSLog(@"row = %@", @(row));
+    
+//    NSInteger scrollViewY = scrollView.contentOffset.y;
+//    NSInteger screenY = [UIScreen mainScreen].bounds.origin.y;
+//    NSInteger y1 = screenY % scrollViewY;
+//    [cell cellAlphaWithContentoffsetY:(1 - row % 4 * .2 )];
+}
+-(NSArray *)cellsForTableView:(UITableView *)tableView
+{
+    NSInteger sections = tableView.numberOfSections;
+    NSMutableArray *cells = [[NSMutableArray alloc]  init];
+    for (int section = 0; section < sections; section++) {
+        NSInteger rows =  [tableView numberOfRowsInSection:section];
+        for (int row = 0; row < rows; row++) {
+            NSIndexPath *indexPath = [NSIndexPath indexPathForRow:row inSection:section];
+            [cells addObject:[tableView cellForRowAtIndexPath:indexPath]];
+        }
+    }
+    return cells;
 }
 @end

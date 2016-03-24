@@ -19,4 +19,7 @@
 
 @property (nonatomic, strong) ODDutyLable *tipLB;
 
+
+- (void)makeCellFilter:(CGFloat)value;
+- (void)cellAlphaWithContentoffsetY:(CGFloat)y;
 @end
