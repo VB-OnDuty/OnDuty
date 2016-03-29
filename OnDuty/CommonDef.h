@@ -54,6 +54,8 @@
 // 安全释放C++对象
 #define SAFE_DELETE(p) { delete (p); (p) = NULL; }
 
+#define WS(weakSelf)  __weak __typeof(&*self)weakSelf = self;
+
 #import "VBUI.h"
 #import "VBFoundation.h"
 #import "VBCategories.h"

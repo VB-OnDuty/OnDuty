@@ -110,17 +110,5 @@
     return 140;
 }
 
--(NSArray *)cellsForTableView:(UITableView *)tableView
-{
-    NSInteger sections = tableView.numberOfSections;
-    NSMutableArray *cells = [[NSMutableArray alloc]  init];
-    for (int section = 0; section < sections; section++) {
-        NSInteger rows =  [tableView numberOfRowsInSection:section];
-        for (int row = 0; row < rows; row++) {
-            NSIndexPath *indexPath = [NSIndexPath indexPathForRow:row inSection:section];
-            [cells addObject:[tableView cellForRowAtIndexPath:indexPath]];
-        }
-    }
-    return cells;
-}
+
 @end

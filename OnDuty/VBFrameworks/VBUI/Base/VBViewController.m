@@ -16,10 +16,7 @@
     [self.view setClipsToBounds:YES];
     self.automaticallyAdjustsScrollViewInsets = NO;
     self.view.backgroundColor = [VBColorManager colorWithHomeColor];
-    
-    UIView *statusBarView = [[UIView alloc]initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, 20)];
-    statusBarView.backgroundColor = [VBColorManager colorWithHomeColor];
-    [self.view addSubview:statusBarView];
+
 }
 
 

@@ -40,25 +40,25 @@
         _titleLB.font = [UIFont fontWithName:@"MFLiHei_Noncommercial-Regular" size:35];
         _titleLB.textColor = [UIColor whiteColor];
         
-        [_grayView mas_makeConstraints:^(MASConstraintMaker *make) {
-            make.edges.equalTo(self).insets(UIEdgeInsetsMake(35, 0, 0, 0));
-        }];
-        [_topIV mas_makeConstraints:^(MASConstraintMaker *make) {
-            make.size.mas_equalTo(CGSizeMake(70, 70));
-            make.top.equalTo(@0);
-            make.centerX.equalTo(self);
-        }];
-        [_titleLB mas_makeConstraints:^(MASConstraintMaker *make) {
-            make.top.equalTo(_topIV.mas_bottom).insets(UIEdgeInsetsMake(5, 0, 0, 0));
-            make.centerX.equalTo(self);
-        }];
+
     }
     return  self;
 }
-//- (void)layoutSubviews{
-//    [super layoutSubviews];
-//   
-//}
+- (void)layoutSubviews{
+    [super layoutSubviews];
+    [_grayView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.edges.equalTo(self).insets(UIEdgeInsetsMake(35, 0, 0, 0));
+    }];
+    [_topIV mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.top.equalTo(@0);
+        make.centerX.mas_equalTo(self.mas_centerX);
+        make.size.mas_equalTo(CGSizeMake(70, 70));
+    }];
+    [_titleLB mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.top.equalTo(_topIV.mas_bottom).insets(UIEdgeInsetsMake(5, 0, 0, 0));
+        make.centerX.equalTo(self);
+    }];
+}
 - (void)setImageName:(NSString *)imageName{
     _imageName = imageName;
     _topIV.image = [UIImage imageNamed:imageName];

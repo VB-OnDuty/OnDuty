@@ -10,7 +10,7 @@
 #import "ODRootButton.h"
 
 #import "ODDutyVC.h"
-//#import
+#import "UIView+VBMotionEffect.h"
 
 @interface ODRootVC ()
 
@@ -36,19 +36,21 @@
 }
 - (void)initMainView{
     //背景
+    WS(ws);
     UIImageView *backGroundIV = ({
         UIImageView *imageV = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"bg.png"]];
         [self.view addSubview:imageV];
         
         [imageV mas_makeConstraints:^(MASConstraintMaker *make) {
-            make.edges.equalTo(self.view);
+            make.edges.equalTo(ws.view);
         }];
         
         imageV;
     });
-    //icon
+//    //icon
     UIImageView *iconIV = ({
         UIImageView *imageV = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"duty.png"]];
+        [imageV vb_registerMotionEffectWithdepth:30];
         [self.view addSubview:imageV];
         
         [imageV mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -63,6 +65,7 @@
     //标语
     UILabel *sloganLB = ({
         UILabel *lable = [[UILabel alloc]init];
+        [lable vb_registerMotionEffectWithdepth:30];
         [self.view addSubview:lable];
         
         [lable mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -79,10 +82,11 @@
     //谁去值日按钮
     ODRootButton * dutyBT = ({
         ODRootButton *button = [[ODRootButton alloc]init];
+        [button vb_registerMotionEffectWithdepth:30];
         [self.view addSubview:button];
         
         [button mas_makeConstraints:^(MASConstraintMaker *make) {
-            make.leftMargin.rightMargin.equalTo(@33);
+            make.leftMargin.equalTo(@33);
             make.height.equalTo(@125);
             make.centerX.equalTo(sloganLB);
             make.top.equalTo(sloganLB.mas_bottom).insets(UIEdgeInsetsMake(50, 0, 0, 0));
@@ -100,10 +104,11 @@
     //谁去买东西按钮
     ODRootButton * buyBT = ({
         ODRootButton *button = [[ODRootButton alloc]init];
+        [button vb_registerMotionEffectWithdepth:30];
         [self.view addSubview:button];
         
         [button mas_makeConstraints:^(MASConstraintMaker *make) {
-            make.leftMargin.rightMargin.equalTo(@33);
+            make.leftMargin.equalTo(@33);
             make.height.equalTo(@125);
             make.centerX.equalTo(dutyBT);
             make.top.equalTo(dutyBT.mas_bottom).insets(UIEdgeInsetsMake(30, 0, 0, 0));

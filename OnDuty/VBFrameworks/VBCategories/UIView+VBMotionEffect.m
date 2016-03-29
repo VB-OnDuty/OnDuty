@@ -14,7 +14,7 @@
 
 - (void)vb_registerMotionEffectWithdepth:(CGFloat)depth
 {
-    if (![[[UIDevice currentDevice] systemVersion] floatValue] >= 7.0) {
+    if ([[[UIDevice currentDevice] systemVersion] floatValue] < 7.0) {
         return;
     }
     UIInterpolatingMotionEffect *effectX;
