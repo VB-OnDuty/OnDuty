@@ -32,7 +32,7 @@
     //    self.edgesForExtendedLayout = UIRectEdgeNone;
     self.extendedLayoutIncludesOpaqueBars = YES;
     self.modalPresentationCapturesStatusBarAppearance = YES;
-    self.automaticallyAdjustsScrollViewInsets = YES;
+    self.automaticallyAdjustsScrollViewInsets = NO;
     self.title = @"值日表";
     [self initNav];
     [self initTableView];
@@ -44,7 +44,6 @@
     [self.navigationController.navigationBar setBackgroundImage:[UIImage new]
                                                   forBarMetrics:UIBarMetricsDefault];
     self.navigationController.navigationBar.shadowImage = [UIImage new];
-    self.navigationController.navigationBar.translucent = YES;
     self.navigationController.navigationBar.backgroundColor = [VBColorManager colorWithHomeColor];
     self.navigationController.navigationBar.tintColor = [UIColor whiteColor];
     NSDictionary *attributes=[NSDictionary dictionaryWithObjectsAndKeys:[UIColor whiteColor],NSForegroundColorAttributeName, [UIFont fontWithName:@"MFLiHei_Noncommercial-Regular" size:17],NSFontAttributeName ,nil];
