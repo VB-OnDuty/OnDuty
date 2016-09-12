@@ -37,4 +37,13 @@ typedef void (^randomSucess)(id result);
  *  @param weightArray 权重数组 范例: @[@1,@2.....]
  */
 + (void)getRandomObjectForArray:(NSArray *)array withWeightArray:(NSArray *)weightArray success:(randomSucess)success;
+
+//------------项目方法-----------
+/**
+ *  根据权重获取谁值日
+ *   默认星期六 星期天为命中周 
+ *
+ *  @param array 参与的人
+ */
++ (void)getRandomArrayForArray:(NSArray *)array success:(randomSucess)success;
 @end

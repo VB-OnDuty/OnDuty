@@ -7,6 +7,7 @@
 //
 
 #import "ODRandomManager.h"
+#import "ODCountDBManager.h"
 
 @implementation ODRandomManager
 
@@ -61,4 +62,41 @@
 + (void)getRandomObjectForArray:(NSArray *)array withWeightArray:(NSArray *)weightArray success:(randomSucess)success{
     success([ODRandomManager getRandomObjectForArray:array withWeightArray:weightArray]);
 }
++ (void)getRandomArrayForArray:(NSArray *)array success:(randomSucess)success{
+    //数据库操作
+    [array enumerateObjectsUsingBlock:^(NSString *  _Nonnull name, NSUInteger idx, BOOL * _Nonnull stop) {
+        ODCountModel *temp = [[ODCountDBManager sharedManager]selectCountInfoWithName:name];
+        if (!temp) {
+            [[ODCountDBManager sharedManager]insertCountInfoWithName:name];
+        }
+    }];
+    
+    
+    //星期六
+    NSMutableArray *nameArray = array.mutableCopy;
+    NSArray *satDutyCountArray = [[ODCountDBManager sharedManager]getDutyCountWith:nameArray];
+    NSString *satName = (NSString *)[ODRandomManager getRandomObjectForArray:nameArray withWeightArray:satDutyCountArray];
+    //星期天
+    [nameArray removeObject:satName];
+    NSArray *SunCountArray = [[ODCountDBManager sharedManager]getDutyCountWith:nameArray];
+    NSString *sunName = (NSString *)[ODRandomManager getRandomObjectForArray:nameArray withWeightArray:SunCountArray];
+    
+    //打乱其他顺序
+    [nameArray removeObject:sunName];
+    NSArray *otherNames = [ODRandomManager randomObjectForArray:nameArray];
+    NSMutableArray *finalArray = [NSMutableArray arrayWithArray:otherNames];
+    [finalArray addObject:satName];
+    [finalArray addObject:sunName];
+    
+    //处理数据库数据
+    [[ODCountDBManager sharedManager]updateDutyCount:1 WithName:satName];
+    [[ODCountDBManager sharedManager]updateDutyCount:1 WithName:sunName];
+    [otherNames enumerateObjectsUsingBlock:^(NSString *  _Nonnull name, NSUInteger idx, BOOL * _Nonnull stop) {
+        [[ODCountDBManager sharedManager]updateDutyCountPlusOneWithName:name];
+    }];
+    success(finalArray);
+    
+    
+}
+
 @end

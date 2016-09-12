@@ -9,6 +9,7 @@
 #import "AppDelegate.h"
 #import "ODRootVC.h"
 #import "VBNavigationController.h"
+#import <BmobSDK/Bmob.h>
 @interface AppDelegate ()
 
 @end
@@ -24,6 +25,7 @@
 #else
     [VBLog setLevel:VBLogLevelOff];
 #endif
+    [self registerThirdPartService];
     [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent animated:NO];
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     ODRootVC * rootCtrl = [[ODRootVC alloc]init];
@@ -56,4 +58,7 @@
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
 }
 
+- (void)registerThirdPartService{
+    [Bmob registerWithAppKey:ODApplicationID];
+}
 @end

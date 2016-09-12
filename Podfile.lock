@@ -1,4 +1,5 @@
 PODS:
+  - BmobSDK (1.6.8)
   - CocoaLumberjack (2.2.0):
     - CocoaLumberjack/Default (= 2.2.0)
     - CocoaLumberjack/Extensions (= 2.2.0)
@@ -7,9 +8,9 @@ PODS:
     - CocoaLumberjack/Core
   - CocoaLumberjack/Extensions (2.2.0):
     - CocoaLumberjack/Default
-  - FMDB/SQLCipher (2.6):
+  - FMDB/SQLCipher (2.6.2):
     - SQLCipher
-  - Masonry (0.6.4)
+  - Masonry (1.0.0)
   - MMPlaceHolder (1.9)
   - MMTweenAnimation (1.1):
     - pop
@@ -21,6 +22,7 @@ PODS:
     - SQLCipher/common
 
 DEPENDENCIES:
+  - BmobSDK
   - CocoaLumberjack
   - FMDB/SQLCipher
   - Masonry
@@ -29,9 +31,10 @@ DEPENDENCIES:
   - pop
 
 SPEC CHECKSUMS:
+  BmobSDK: 8fd02a7bb29ec290c5d37625169abbdb1c87c677
   CocoaLumberjack: 17fe8581f84914d5d7e6360f7c70022b173c3ae0
-  FMDB: c1968bab3ab0aed38f66cb778ae1e7fa9a652b6e
-  Masonry: 281802d04d787ea2973179ee8bcb50500579ede2
+  FMDB: 854a0341b4726e53276f2a8996f06f1b80f9259a
+  Masonry: b529bb169217897b6354d4b56b1fada6d475b13d
   MMPlaceHolder: 40212b9dfe8760134b1b2fce3232f0d46200178f
   MMTweenAnimation: a095d3203731fcb32a9b8039c4776cef0dbd2a58
   pop: f667631a5108a2e60d9e8797c9b32ddaf2080bce

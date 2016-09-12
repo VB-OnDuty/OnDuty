@@ -8,6 +8,7 @@
 
 #import "VBObject.h"
 
+
 @interface ODCountDBManager :VBObject
 
 + (id)sharedManager;

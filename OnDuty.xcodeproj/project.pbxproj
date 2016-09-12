@@ -37,7 +37,6 @@
 		A2CAA50E1C994E0400031094 /* ODRandomManager.m in Sources */ = {isa = PBXBuildFile; fileRef = A2CAA50D1C994E0400031094 /* ODRandomManager.m */; };
 		A2CAA5161C99507900031094 /* ODCountModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A2CAA5151C99507900031094 /* ODCountModel.m */; };
 		A2CAA5191C9952A200031094 /* ODCountDBManager.m in Sources */ = {isa = PBXBuildFile; fileRef = A2CAA5181C9952A200031094 /* ODCountDBManager.m */; };
-		A2CAA5261C9A500B00031094 /* ODtextDB.m in Sources */ = {isa = PBXBuildFile; fileRef = A2CAA5251C9A500B00031094 /* ODtextDB.m */; };
 		A2CAA5291C9C649700031094 /* MFLiHei_Noncommercial-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = A2CAA5281C9C640400031094 /* MFLiHei_Noncommercial-Regular.otf */; };
 		A2CAA52C1C9C945500031094 /* ODRootButton.m in Sources */ = {isa = PBXBuildFile; fileRef = A2CAA52B1C9C945500031094 /* ODRootButton.m */; };
 		A2CAA52F1C9C97EE00031094 /* UIColor+HEX.m in Sources */ = {isa = PBXBuildFile; fileRef = A2CAA52E1C9C97EE00031094 /* UIColor+HEX.m */; };
@@ -69,6 +68,7 @@
 		03A48840625F5B38E96649A7 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		1E78EEDD435B479402B96368 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		21744CD10DB9CF981506E52F /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		A21AF83B1CB35A5000B03294 /* ODAppKeys.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ODAppKeys.h; sourceTree = "<group>"; };
 		A241EB061C7EA16E004385DA /* OnDuty.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OnDuty.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A241EB0A1C7EA16E004385DA /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		A241EB0C1C7EA16E004385DA /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -114,7 +114,6 @@
 		A241EB9B1C7EA7DB004385DA /* UIView+ITTAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+ITTAdditions.m"; sourceTree = "<group>"; };
 		A241EB9D1C7EA855004385DA /* ODRootVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ODRootVC.h; sourceTree = "<group>"; };
 		A241EB9E1C7EA855004385DA /* ODRootVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ODRootVC.m; sourceTree = "<group>"; };
-		A241EBA01C87E7FA004385DA /* OnDuty-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "OnDuty-Prefix.pch"; sourceTree = "<group>"; };
 		A241EBA31C87E8CD004385DA /* VBConfigDBManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VBConfigDBManager.h; sourceTree = "<group>"; };
 		A241EBA41C87E8CD004385DA /* VBConfigDBManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VBConfigDBManager.m; sourceTree = "<group>"; };
 		A241EBA51C87E8CD004385DA /* VBDBManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VBDBManager.h; sourceTree = "<group>"; };
@@ -139,8 +138,6 @@
 		A2CAA5151C99507900031094 /* ODCountModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ODCountModel.m; sourceTree = "<group>"; };
 		A2CAA5171C9952A200031094 /* ODCountDBManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ODCountDBManager.h; sourceTree = "<group>"; };
 		A2CAA5181C9952A200031094 /* ODCountDBManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ODCountDBManager.m; sourceTree = "<group>"; };
-		A2CAA5241C9A500B00031094 /* ODtextDB.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ODtextDB.h; sourceTree = "<group>"; };
-		A2CAA5251C9A500B00031094 /* ODtextDB.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ODtextDB.m; sourceTree = "<group>"; };
 		A2CAA5281C9C640400031094 /* MFLiHei_Noncommercial-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "MFLiHei_Noncommercial-Regular.otf"; sourceTree = "<group>"; };
 		A2CAA52A1C9C945500031094 /* ODRootButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ODRootButton.h; sourceTree = "<group>"; };
 		A2CAA52B1C9C945500031094 /* ODRootButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ODRootButton.m; sourceTree = "<group>"; };
@@ -219,7 +216,6 @@
 			children = (
 				A241EB0C1C7EA16E004385DA /* AppDelegate.h */,
 				A241EB0D1C7EA16E004385DA /* AppDelegate.m */,
-				A241EBA01C87E7FA004385DA /* OnDuty-Prefix.pch */,
 				A2CAA5121C994FDF00031094 /* Models */,
 				A241EB651C7EA382004385DA /* 3rd */,
 				A241EB3F1C7EA342004385DA /* VBFrameworks */,
@@ -241,6 +237,7 @@
 				A241EB0A1C7EA16E004385DA /* main.m */,
 				A241EB931C7EA3FA004385DA /* OnDuty-Prefix.pch */,
 				A241EB921C7EA3D7004385DA /* CommonDef.h */,
+				A21AF83B1CB35A5000B03294 /* ODAppKeys.h */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -394,8 +391,6 @@
 				A241EBA21C87E8CD004385DA /* VBDBManager */,
 				A241EBB01C87E8CD004385DA /* VBDBManagerFactory.h */,
 				A241EBB11C87E8CD004385DA /* VBDBManagerFactory.m */,
-				A2CAA5241C9A500B00031094 /* ODtextDB.h */,
-				A2CAA5251C9A500B00031094 /* ODtextDB.m */,
 				A2CAA5171C9952A200031094 /* ODCountDBManager.h */,
 				A2CAA5181C9952A200031094 /* ODCountDBManager.m */,
 			);
@@ -672,7 +667,6 @@
 				A2EFA67A1CA11E7A0012A27D /* ODDutyLable.m in Sources */,
 				A241EB5F1C7EA342004385DA /* VBNavigationController.m in Sources */,
 				A241EBB61C87E8CD004385DA /* VBFMEncryptHelper.m in Sources */,
-				A2CAA5261C9A500B00031094 /* ODtextDB.m in Sources */,
 				A2CAA5191C9952A200031094 /* ODCountDBManager.m in Sources */,
 				A241EBB21C87E8CD004385DA /* VBConfigDBManager.m in Sources */,
 				A241EB5C1C7EA342004385DA /* VBLog.m in Sources */,

@@ -9,15 +9,18 @@
 #import "ODDutyVC.h"
 #import "ODDutyCell.h"
 
+static NSString *ODRandomNameArray    = @"ODRandomNameArray";
+static NSString *ODLastWeekofYear     = @"ODLastWeekofYear";
 @interface ODDutyVC () <
     UITableViewDataSource,
     UITableViewDelegate,
     UIScrollViewDelegate
 >
 
+
 @property (nonatomic, strong)UITableView *tableView;
 
-
+@property (nonatomic, strong)NSArray *nameArr;
 
 @end
 
@@ -34,9 +37,23 @@
     self.modalPresentationCapturesStatusBarAppearance = YES;
     self.automaticallyAdjustsScrollViewInsets = NO;
     self.title = @"值日表";
+    
+    
+    if ([self isOutofDate]) {
+        
+        [ODRandomManager getRandomArrayForArray:@[@"金晟意",@"张梦佳",@"李鸿勋",@"杨洁",@"刘照宇",@"张昊",@"刘天伟"] success:^(id result) {
+            self.nameArr = result;
+            [[NSUserDefaults standardUserDefaults] setObject:result forKey:ODRandomNameArray];
+            [[NSUserDefaults standardUserDefaults] setObject:[NSNumber numberWithInteger:[[self getCurrentDateComponents] weekOfYear]]  forKey:ODLastWeekofYear];
+            [[NSUserDefaults standardUserDefaults] synchronize];
+        }];
+    }
+    [self checkNameArray];
+
+    
     [self initNav];
     [self initTableView];
-    [self initMask];
+//    [self initMask];
     
 }
 
@@ -79,7 +96,7 @@
     [self.view.layer addSublayer: maskLayer];
 }
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-    return 30;
+    return self.nameArr.count;
 }
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     static NSString *identity = @"OnDutyVCCell";
@@ -87,10 +104,9 @@
     if (!cell) {
         cell = [[ODDutyCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:identity];
     }
-    
-    cell.dateLB.text = @"2016/03/22";
+    cell.dateLB.text = [self getDataWithRow:indexPath.row];
     cell.photoIV.image = [UIImage imageNamed:@"123.jpg"];
-    cell.nameLB.text = @"张日天";
+    cell.nameLB.text = self.nameArr[indexPath.row];
     [cell isOnDutyToday:NO];
     if (indexPath.row == 0) {
         cell.tipLB.text = @"就在今天";
@@ -107,6 +123,69 @@
 }
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
     return 140;
+}
+
+- (NSString *)getDataWithRow:(NSInteger)row {
+    NSCalendar *calendar = [[NSCalendar alloc] initWithCalendarIdentifier:NSGregorianCalendar];
+    NSDateComponents *comps = nil;
+    comps = [calendar components:NSYearCalendarUnit|NSMonthCalendarUnit|NSDayCalendarUnit fromDate:[NSDate date]];
+    NSDateComponents *adcomps = [[NSDateComponents alloc] init];
+    
+    [adcomps setDay:row];
+    
+    NSDate *newdate = [calendar dateByAddingComponents:adcomps toDate:[NSDate date] options:0];
+    NSDateFormatter  *dateformatter=[[NSDateFormatter alloc] init];
+    
+    [dateformatter setDateFormat:@"YYYY/MM/dd"];
+    
+    NSString *  locationString=[dateformatter stringFromDate:newdate];
+    return locationString;
+}
+
+- (NSDateComponents *)getCurrentDateComponents{
+    NSCalendar *calendar = [[NSCalendar alloc] initWithCalendarIdentifier:NSGregorianCalendar];
+    calendar.firstWeekday = 2;
+    NSDate *now;
+    
+    NSDateComponents *comps = [[NSDateComponents alloc] init];
+
+    NSInteger unitFlags = NSYearCalendarUnit | NSMonthCalendarUnit | NSDayCalendarUnit | NSWeekdayCalendarUnit | NSWeekOfYearCalendarUnit |
+    NSHourCalendarUnit | NSMinuteCalendarUnit | NSSecondCalendarUnit;
+    now = [NSDate date];
+    comps = [calendar components:unitFlags fromDate:now];
+        //（注意，周日是“1”，周一是“2”。。。。）
+    return comps;
+}
+
+
+
+- (BOOL)isOutofDate{
+    NSDateComponents * currentDateComponents = [self getCurrentDateComponents];
+    NSInteger currentWeekofYear = [currentDateComponents weekOfYear];
+    NSInteger lastWeekofYear = [[[NSUserDefaults standardUserDefaults] objectForKey:ODLastWeekofYear] integerValue];
+    NSLog(@"%zd  %zd", currentWeekofYear, lastWeekofYear);
+    if (currentWeekofYear == lastWeekofYear) {
+        return NO;
+    }
+    return YES;
+}
+
+- (void)checkNameArray {
+    NSArray *originalArr = [[NSUserDefaults standardUserDefaults] objectForKey:ODRandomNameArray];
+    
+    NSInteger week = [[self getCurrentDateComponents] weekday];
+    
+    NSMutableArray *finalArr = [NSMutableArray array];
+    
+    if (week == 1) {
+        self.nameArr = @[[originalArr lastObject]];
+    } else {
+        for (NSInteger i = week; i <= 8; i++) {
+            [finalArr addObject:originalArr[i - 2]];
+        }
+        self.nameArr = finalArr;
+    }
+    
 }
 
 
